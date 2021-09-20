@@ -1,0 +1,17 @@
+server:
+  port: 8083
+  name: /auth
+spring:
+  application:
+    name: auth
+  cloud:
+    config:
+      name: application-mysqlServer, eureka-default
+      enabled: true
+      uri: http://ec2-18-231-164-35.sa-east-1.compute.amazonaws.com:8888
+
+security:
+  jwt:
+    token:
+      secret-key: chave_microservices
+      expire-length: 36000000  

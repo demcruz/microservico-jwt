@@ -1,0 +1,16 @@
+server:
+  port: 8081
+  name: /crud
+spring:
+  application:
+    name: crud
+  cloud:
+    config:
+      name: application-mysqlServer, eureka-default
+      enabled: true
+      uri: http://ec2-18-231-164-35.sa-east-1.compute.amazonaws.com:8888
+  
+security:
+  jwt:
+    token:
+      secret-key: chave_microservices
